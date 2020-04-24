@@ -7,7 +7,7 @@ services:
         container_name: Portainer
         volumes:
         - "/var/run/docker.sock:/var/run/docker.sock"
-        - "/host_mnt/c/portainer:/data"
+        - "/host_mnt/c/portainer/:/data"
         environment:
             - TZ=Europe/Amsterdam
         restart: unless-stopped
