@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+    Portainer:
+        image: portainer/portainer
+        ports:
+        - "9000:9000"
+        container_name: Portainer
+        volumes:
+        - "/var/run/docker.sock:/var/run/docker.sock"
+        - "/host_mnt/c/portainer:/data"
+        environment:
+            - TZ=Europe/Amsterdam
+        restart: unless-stopped
